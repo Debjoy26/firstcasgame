@@ -6,15 +6,15 @@ int main() {
     int number, guess, attempts = 0;
     const int MAX_ATTEMPTS = 5;
     
-    // Seed the random number generator
+    
     srand(time(0));
-    number = rand() % 100 + 1; // Random number between 1 and 100
+    number = rand() % 100 + 1; 
 
     printf("Welcome to the Number Guessing Game!\n");
     printf("I have selected a number between 1 and 100.\n");
     printf("You have %d attempts to guess it.\n", MAX_ATTEMPTS);
 
-    // Game loop
+    
     while (attempts < MAX_ATTEMPTS) {
         printf("Enter your guess: ");
         scanf("%d", &guess);
@@ -22,7 +22,7 @@ int main() {
 
         if (guess < 1 || guess > 100) {
             printf("Please guess a number between 1 and 100.\n");
-            attempts--; // Do not count invalid attempts
+            attempts--; 
             continue;
         }
 
@@ -32,7 +32,7 @@ int main() {
             printf("Too high! Try again.\n");
         } else {
             printf("Congratulations! You've guessed the number %d in %d attempts.\n", number, attempts);
-            break; // Exit the loop if guessed correctly
+            break; 
         }
 
         if (attempts == MAX_ATTEMPTS) {
